@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
+
+        java.util.Locale.setDefault(new java.util.Locale("en", "US"));
+
         Scanner scanner = new Scanner(System.in);
         SoftDrink drink1 = new SoftDrink(scanner.nextLine(), scanner.nextDouble());
 
