@@ -6,11 +6,30 @@ package at.fhj.iit;
 public class MixedDrink extends Drink{
 
     /**
-     * uses two liquids
+     * uses two liquids and a garnish
      */
     protected Liquid l1;
     protected Liquid l2;
+    protected String garnish;
 
+
+
+    /**
+     * Creates a MixedDrink object with given name, liquids and a garnish
+     *
+     * @param name name of drink
+     * @param l1 first liquid
+     * @param l2 second liquid to mix with
+     * @param garnish garnish in form a string
+     */
+    MixedDrink(String name, Liquid l1, Liquid l2, String garnish){
+        super(name);
+        this.l1 = l1;
+        this.l2 = l2;
+        this.garnish = garnish;
+
+        java.util.Locale.setDefault(new java.util.Locale("en", "US"));
+    }
     /**
      * Creates a MixedDrink object with given name and liquids
      *
@@ -22,6 +41,8 @@ public class MixedDrink extends Drink{
         super(name);
         this.l1 = l1;
         this.l2 = l2;
+
+        java.util.Locale.setDefault(new java.util.Locale("en", "US"));
     }
 
     /**
@@ -41,24 +62,44 @@ public class MixedDrink extends Drink{
      */
     @Override
     public double getAlcoholPercent() {
-        return ((l1.getVolume()) * l1.getAlcoholPercent() + (l2.getVolume()) * l2.getAlcoholPercent())/getVolume();
+        return ((l1.getVolume()) * l1.getAlcoholPercent() + (l2.getVolume()) * l2.getAlcoholPercent()) / getVolume();
     }
 
     /**
-     * Gives information if drink is alcoholic or not
+     * Gives information if the drink is alcoholic or not
      *
      * @return true when alcoholic liquids are present, otherwise false
      */
     @Override
     public boolean isAlcoholic() {
-        if(l1.getAlcoholPercent() > 0 || l2.getAlcoholPercent() > 0){
+        if(l1.getAlcoholPercent() > 0 || l2.getAlcoholPercent() > 0)
             return true;
-        }
         return false;
     }
 
+    /**
+     * Gives information if the drink has a garnish or not
+     *
+     * @return true if drink has a garnish, otherwise false
+     */
+    public boolean hasGarnish() {
+        if(garnish != null)
+            return true;
+        else
+            return false;
+    }
+
+    /**
+     * Prints object information
+     *
+     * @return formatted String
+     */
+    @Override
     public String toString(){
         String alcoholPercent = String.format("%.1f", getAlcoholPercent());
-        return "Mixed Drink called " + name + " with " + alcoholPercent + " percent alcohol by volume";
+        if(hasGarnish())
+            return "Mixed Drink called " + name + " with " + alcoholPercent + " percent alcohol by volume and with " + garnish + " as garnish";
+        else
+            return "Mixed Drink called " + name + " with " + alcoholPercent + " percent alcohol by volume";
     }
 }
