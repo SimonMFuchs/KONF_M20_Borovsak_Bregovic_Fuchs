@@ -34,7 +34,7 @@ class SoftDrinkTest extends Drink {
     @org.junit.jupiter.api.Test
     void testGetAlcoholPercent() {
         Drink drink = new SoftDrink("soda", 0.5);
-       assertEquals(0.0, drink.getAlcoholPercent());
+        assertEquals(0.0, drink.getAlcoholPercent());
 
     }
 
