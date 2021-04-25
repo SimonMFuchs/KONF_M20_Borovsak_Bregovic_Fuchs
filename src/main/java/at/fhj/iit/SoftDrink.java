@@ -19,14 +19,14 @@ public class SoftDrink extends Drink{
 
     public String mixSoftDrinks(String name1, String name2) {
         String mix = name1.trim().toLowerCase()+name2.trim().toLowerCase();
-        if (mix == "colafanta" || mix == "fantacola"){
-            mix = " spezi ";
-        }else if (mix == "colasoda" || mix == "sodacola"){
-            mix = " cola with soda ";
-        }else if (mix == "fantasoda" || mix == "sodafanta" ) {
-            mix = " fanta with soda ";
+        if (mix.equals("colafanta") || mix.equals("fantacola")){
+            mix = "spezi";
+        }else if (mix.equals("colasoda") || mix.equals("sodacola")){
+            mix = "cola with soda";
+        }else if (mix.equals("fantasoda") || mix.equals("sodafanta") ) {
+            mix = "fanta with soda";
         }else {
-            mix = " No such kombination in base ";
+            mix = "No such kombination in base";
         }
 
         return mix;
