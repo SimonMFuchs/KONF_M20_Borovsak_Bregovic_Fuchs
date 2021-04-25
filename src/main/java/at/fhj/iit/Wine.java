@@ -72,6 +72,13 @@ public class Wine extends Drink {
     public String getName() {
         return null;
     }
+
+    @Override
+    public String toString(){
+        String alcoholPercent = String.format("%.1f", getAlcoholPercent());
+
+            return "Mixed wine drink " + name + " with " + alcoholPercent + " percent alcohol by volume";
+    }
 }
 
 
