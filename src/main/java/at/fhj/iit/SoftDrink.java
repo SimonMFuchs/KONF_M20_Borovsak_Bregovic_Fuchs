@@ -68,5 +68,4 @@ public class SoftDrink extends Drink{
     public String getName() {
         return super.name;
     }
-
 }
