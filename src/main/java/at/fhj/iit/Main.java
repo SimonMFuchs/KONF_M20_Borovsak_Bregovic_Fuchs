@@ -1,11 +1,9 @@
 package at.fhj.iit;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+
         SoftDrink drink1 = new SoftDrink("cola", 0.5);
         System.out.println("Is Cola alcoholic? " + drink1.alcoholic);
 
