@@ -17,6 +17,7 @@ public class SoftDrink extends Drink{
     public double getVolume() {
         return volume;
     }
+
     @Override
     public double getAlcoholPercent() {
         return 0;
