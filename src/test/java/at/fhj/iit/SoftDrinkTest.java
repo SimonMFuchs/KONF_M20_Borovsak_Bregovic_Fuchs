@@ -1,19 +1,33 @@
 package at.fhj.iit;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class SoftDrinkTest extends Drink {
 
-    @org.junit.jupiter.api.Test
-    void mixSoftDrinks() {
+    @ParameterizedTest
+    @CsvSource({
+            "cola, fanta",
+    })
+    @DisplayName("Test mixSoftDrinks")
+    void mixSoftDrinks(String name1, String name2) {
         SoftDrink drink = new SoftDrink("cola", 0.5);
-        assertEquals("spezi", drink.mixSoftDrinks("cola", "fanta "));
-
+        assertEquals("spezi", drink.mixSoftDrinks(name1, name2));
     }
 
-    @org.junit.jupiter.api.Test
-    void testGetVolume() {
-        Drink drink = new SoftDrink("fanta", 0.5);
+
+    @ParameterizedTest
+    @CsvSource({
+            "cola, 0.5",
+            "fanta, 0.01",
+            "spezi, 1.0",
+    })
+    @DisplayName("Test getVolume")
+    void testGetVolume(String name, double vol) {
+        Drink drink = new SoftDrink(name, vol);
         assertEquals(0.5, drink.getVolume());
     }
 
