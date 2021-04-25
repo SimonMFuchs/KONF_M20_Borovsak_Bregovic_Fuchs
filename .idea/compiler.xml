@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="KONF_M20_Borovsak_Bregovic_Fuchs" />
+        <module name="Drinks" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="KONF_M20_Borovsak_Bregovic_Fuchs" target="11" />
+      <module name="Drinks" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
