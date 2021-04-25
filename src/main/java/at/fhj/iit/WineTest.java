@@ -44,7 +44,7 @@ public class WineTest {
         @Test
         void getName() {
             Liquid w = new Liquid("wine2", 2, 12);
-            assertEquals("wine", w.getName());
+            assertEquals("wine2", w.getName());
         }
 
     }
