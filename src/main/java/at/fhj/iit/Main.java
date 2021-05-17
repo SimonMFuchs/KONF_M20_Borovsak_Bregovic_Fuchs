@@ -5,7 +5,8 @@ public class Main {
     public static void main(String[] args){
 
         Liquid liquid = new Liquid("cola", 0.5, 0);
-        System.out.println("Is Cola alcoholic? " + liquid.getAlcoholPercent());
+        Drink drink1 = new SoftDrink(liquid, "Fanta", 1.0);
+        System.out.println("How much alcohol does " + drink1.getName() + " possess? " + liquid.getAlcoholPercent());
 
         Liquid l = new Liquid("Wein", 0.125, 13);
         System.out.println(l.getName());
