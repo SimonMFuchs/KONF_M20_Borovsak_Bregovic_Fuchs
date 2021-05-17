@@ -3,19 +3,23 @@ package at.fhj.iit;
 import javax.xml.namespace.QName;
 import java.util.Scanner;
 
+
+//have to use the parentclass liquide
 public class SoftDrink extends Drink{
 
+    Liquid mySoftDrink;
+
     /**
-     * @param name1 , softdrink name
+     * @param name , softdrink name
      * @param volume , volume in liters
      *               the attributes that are necessary for a softdrink in order to exist
      * alcoholic and alcoholicPercent are set this values because softdrinks are not alcoholic
      */
-    public SoftDrink(String name1, double volume){
-        super.name = name1;
-        super.volume = volume;
-        super.alcoholic = false;
-        super.alcoholPercent = 0.0;
+    public SoftDrink(Liquid myLiquid, String name, double volume ){
+        this.mySoftDrink = myLiquid;
+        mySoftDrink.setName(name);
+        mySoftDrink.setVolume(volume);
+        mySoftDrink.setAlcoholPercent(0);
     }
 
     /**
@@ -23,6 +27,7 @@ public class SoftDrink extends Drink{
      */
     public SoftDrink(){
     }
+
 
 
     /**
@@ -50,21 +55,21 @@ public class SoftDrink extends Drink{
 
     @Override
     public double getVolume() {
-        return super.volume;
+        return this.mySoftDrink.getVolume();
     }
 
     @Override
     public double getAlcoholPercent() {
-        return super.alcoholPercent;
+        return this.mySoftDrink.getAlcoholPercent();
     }
 
     @Override
     public boolean isAlcoholic() {
-        return super.alcoholic;
+        return false;
     }
 
     @Override
     public String getName() {
-        return super.name;
+        return this.mySoftDrink.getName();
     }
 }

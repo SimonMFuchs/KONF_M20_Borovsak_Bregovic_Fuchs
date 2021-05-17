@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args){
 
-        SoftDrink drink1 = new SoftDrink("cola", 0.5);
-        System.out.println("Is Cola alcoholic? " + drink1.alcoholic);
+        Liquid drink1 = new Liquid("cola", 0.5, 0);
+        System.out.println("Is Cola alcoholic? " + drink1.getAlcoholPercent());
 
         Liquid l = new Liquid("Wein", 0.125, 13);
         System.out.println(l.getName());
