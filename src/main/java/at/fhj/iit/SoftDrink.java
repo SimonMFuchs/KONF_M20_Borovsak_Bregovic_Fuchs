@@ -1,14 +1,13 @@
 package at.fhj.iit;
 
-import javax.xml.namespace.QName;
-import java.util.Scanner;
-
+import java.util.Date;
 
 //have to use the parentclass liquide
 public class SoftDrink extends Drink{
 
     Liquid mySoftDrink;
-
+    Integer pricePerLiter;
+    Date dateWhenBought;
     /**
      * @param name , softdrink name
      * @param volume , volume in liters
@@ -20,6 +19,7 @@ public class SoftDrink extends Drink{
         mySoftDrink.setName(name);
         mySoftDrink.setVolume(volume);
         mySoftDrink.setAlcoholPercent(0);
+        dateWhenBought = new Date();
     }
 
     /**
