@@ -6,7 +6,7 @@ import java.util.Date;
 public class Customer {
     private Date date;       // Umsatz at a specific Day
     private Integer billNR;     // identifyer by id
-    private Integer sale;   // Umsatz pro Person
+    private Integer sales;   // Umsatz pro Person
     private static  int id;
 
 
@@ -14,20 +14,24 @@ public class Customer {
      * Creating a Custumer
      * @param date  is the date on which the drink is bought
      * @param id    identifyer for the specific bill
-     * @param sale  cost of drink
+     * @param cost  cost of drink
      */
-    public Customer(Date date, Integer id, Integer sale){
+    public Customer(Date date, Integer id, Integer cost){
         this.date = date;
         this.billNR = id++;
-        this.sale = sale;
+        this.sales = cost;
     }
 
-    public void buyDrink (Integer sale){
-        this.sale += sale;
+    /**
+     * adding the cost of the drink to the sales of a customer
+     * @param cost is the cost of the drink
+     */
+    public void buyDrink (Integer cost){
+        this.sales += cost;
     }
 
     public Integer getSales() {
-        return sale;
+        return sales;
     }
 
 
