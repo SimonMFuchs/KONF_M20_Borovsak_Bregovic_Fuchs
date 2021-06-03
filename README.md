@@ -30,6 +30,7 @@
 | WineTest           | 03.06.2021   | 100% methods, 91% lines   | Katarina               |
 
 
+### Excercise 1 - implemantations of java classes ###
 
 **Dominik** SoftDrink class, consisting of Soft drinks 
 
