@@ -11,9 +11,9 @@
 | Fuchs Simon              |  simon.fuchs@edu.fh-joanneum.at        |
 
 
-### Excercise 3 - changes table, commit history ###
+### Exercise 3 - changes table, commit history ###
 
-| Date          |  Time         |Decription of changes         |Name of the contributor | 
+| Date          |  Time         |Description of changes        |Name of the contributor | 
 | ------------- |---------------|------------------------------|------------------------|
 | 03.06.2021    |  12:36        | Created branch name Sales    | Katarina               |
 | 03.06.2021    |  12:37        | Modified README file         | Katarina               |
@@ -30,7 +30,7 @@
 | WineTest           | 03.06.2021   | 100% methods, 91% lines   | Katarina               |
 
 
-### Excercise 1 - implemantations of java classes ###
+### Exercise 1 - Implementation of java classes ###
 
 **Dominik** SoftDrink class, consisting of Soft drinks 
 
