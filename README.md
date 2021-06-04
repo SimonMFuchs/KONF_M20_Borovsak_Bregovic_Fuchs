@@ -1,12 +1,38 @@
 # Software Configuration Management #
 
-## Drinks ##
+## Drinks  ##
 
-### Borovsak Katarina, Bregovic Dominik, Fuchs Simon ###
+### Group F ### 
+
+| Name of the contributor  |  e-Mail                                |
+| ------------------------ |----------------------------------------|
+| Borovsak Katarina        |  katarina.borovsak@edu.fh-joanneum.at  |
+| Bregovic Dominik         |  dominik.bregovic@edu.fh-joanneum.at   |
+| Fuchs Simon              |  simon.fuchs@edu.fh-joanneum.at        |
+
+ 
+### Exercise 3 - changes table, commit history ###
+
+| Date          |  Time         |Description of changes        |Name of the contributor | 
+| ------------- |---------------|------------------------------|------------------------|
+| 03.06.2021    |  12:36        | Created branch name Sales    | Katarina               |
+| 03.06.2021    |  12:37        | Modified README file         | Katarina               |
+| 03.06.2021    |  13:01        | Created class Sales.java     | Katarina               |
+|               |               |                              |                        |
 
 
+### Exercise 2 - test coverage ###
 
-**Dominik:** SoftDrink class, consisting of Soft drinks 
+| Class name         | Date         |  Coverage                 |Name of the contributor | 
+| ------------------ |------------- |---------------------------|------------------------|
+| MixedDrinkTest     |              |                           | Simon                  |
+| SoftDrinkTest      |              |                           | Dominik                 |
+| WineTest           | 03.06.2021   | 100% methods, 91% lines   | Katarina               |
+
+
+### Exercise 1 - Implementation of java classes ###
+
+**Dominik** SoftDrink class, consisting of Soft drinks 
 
 -First added some mebervariables to the superclass Drinks.
 
