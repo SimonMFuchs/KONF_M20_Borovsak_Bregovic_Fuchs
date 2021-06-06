@@ -6,6 +6,7 @@ import java.util.Date;
 public class SoftDrink extends Drink implements PurchasableDrink{
 
     Liquid mySoftDrink;
+
     /**
      * @param name , softdrink name
      * @param volume , volume in liters
@@ -80,5 +81,7 @@ public class SoftDrink extends Drink implements PurchasableDrink{
     @Override
     public void purchase(CashRegister cashRegister) {
         cashRegister.addSale(new Sale(cashRegister.getCurrentCashier(), this.getPrice(), this.getAlcoholPercent()));
+
     }
+
 }
