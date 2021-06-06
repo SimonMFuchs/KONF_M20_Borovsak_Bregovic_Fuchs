@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -8,9 +9,14 @@ import java.util.Date;
 public class Sale {
 
     /**
-     * time of sale
+     * day of sale as string
      */
-    protected Date date;
+    protected String date;
+
+    /**
+     * formatter for date;
+     */
+    protected static SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
     /**
      * cashier who made the sale
@@ -31,19 +37,18 @@ public class Sale {
      * Creates new liquid with given name, volume and
      * alcoholPercent
      *
-     * @param date time of purchase
      * @param cashier cashier who made the sale
      * @param price price of the drink purchased
      * @param alcoholicPercent alcoholic percent of the drink purchased
      */
-    Sale(Date date, Cashier cashier, double price, double alcoholicPercent) {
-        this.date = date;
+    Sale(Cashier cashier, double price, double alcoholicPercent) {
+        this.date = formatter.format(new Date());
         this.cashier = cashier;
         this.price = price;
         this.alcoholicPercent = alcoholicPercent;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
