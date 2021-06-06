@@ -1,7 +1,5 @@
 package at.fhj.iit;
 
-import java.util.Date;
-
 /**
  * represents a alcoholic mixed drink
  */
