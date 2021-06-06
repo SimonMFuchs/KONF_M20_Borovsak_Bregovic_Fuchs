@@ -10,6 +10,22 @@
 | Bregovic Dominik         |  dominik.bregovic@edu.fh-joanneum.at   |
 | Fuchs Simon              |  simon.fuchs@edu.fh-joanneum.at        |
 
+###What is this project for?
+
+This project lets you create different drinks composed of different liquids. 
+For more information on the drinks you're able to create with this program please look below. 
+
+In addition you can also add drinks as a purchase to a cash register, 
+which then tracks what kind of drinks got sold, when they got sold and how much revenue you made.
+
+###How to use this project? 
+
+Simply create different liquids and drinks and purchase them via the cash register.
+For more information please look at the tutorial site in this repository.
+
+###Installation instructions
+
+Not much to say here. Just make sure you have maven installed and import the project into the IDE of your choice.
  
 ### Exercise 3 - changes table, commit history ###
 
@@ -34,7 +50,7 @@
 
 | Class name         | Date         |  Coverage                 |Name of the contributor | 
 | ------------------ |------------- |---------------------------|------------------------|
-| MixedDrinkTest     |              | 100% methods, 100%lines   | Simon                  |
+| MixedDrinkTest     | 06.06.2021   | 100% methods, 100%lines   | Simon                  |
 | SoftDrinkTest      |              |                           | Dominik                 |
 | WineTest           | 03.06.2021   | 100% methods, 91% lines   | Katarina               |
 
