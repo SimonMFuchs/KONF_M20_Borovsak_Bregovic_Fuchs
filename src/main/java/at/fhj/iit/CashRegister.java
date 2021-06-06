@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,6 +25,11 @@ public class CashRegister {
      * List of sales made with the cashRegister
      */
     private static List<Sale> salesList = new ArrayList<Sale>();
+
+    /**
+     * formatter for date;
+     */
+    protected static SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
     /**
      * creating a cashRegister
@@ -107,7 +113,7 @@ public class CashRegister {
     public double getRevenueByDay(Date date) {
         double revenue = 0;
         for(Sale sale : salesList) {
-           if(sale.getDate() == date)
+           if(sale.getDate() == formatter.format(date))
                revenue += sale.getPrice();
         }
         return revenue;
@@ -136,7 +142,7 @@ public class CashRegister {
     public double getRevenueByCashierAndDay(Cashier cashier, Date date) {
         double revenue = 0;
         for(Sale sale : salesList) {
-            if(sale.getCashier() == cashier && sale.getDate() == date)
+            if(sale.getCashier() == cashier && sale.getDate() == formatter.format(date))
                 revenue += sale.getPrice();
         }
         return revenue;

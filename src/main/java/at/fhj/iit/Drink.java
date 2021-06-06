@@ -3,8 +3,7 @@ package at.fhj.iit;
 /**
  * Abstract base class for concrete drink classes
  */
-public abstract class Drink implements PurchasableDrink{
-
+public abstract class Drink implements PurchasableDrink {
 
     /**
      * name of the drink, so it's easier to identify drink

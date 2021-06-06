@@ -81,6 +81,6 @@ public class SimpleDrink extends Drink implements PurchasableDrink{
      */
     @Override
     public void purchase(CashRegister cashRegister) {
-        cashRegister.addSale(new Sale(new Date(), cashRegister.getCurrentCashier(), this.getPrice(), this.getAlcoholPercent()));
+        cashRegister.addSale(new Sale(cashRegister.getCurrentCashier(), this.getPrice(), this.getAlcoholPercent()));
     }
 }
