@@ -1,10 +1,15 @@
 package at.fhj.iit;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CashRegisterTest {
+
+    @BeforeEach
+    public void setup() {
+    }
 
     @Test
     void changeCashier() {
