@@ -1,1 +1,1 @@
-** My class **
+Softdrink

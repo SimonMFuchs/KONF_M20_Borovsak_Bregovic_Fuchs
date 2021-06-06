@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -8,6 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SoftDrinkTest extends Drink implements PurchasableDrink{
 
+    private Liquid liquid;
+
+    @BeforeEach
+    void createLiquide(){
+        this.liquid = new Liquid("cola", 0.5, 1.0);
+    }
 
     @ParameterizedTest
     @CsvSource({
@@ -15,7 +22,6 @@ class SoftDrinkTest extends Drink implements PurchasableDrink{
     })
     @DisplayName("Test mixSoftDrinks")
     void mixSoftDrinks(String name1, String name2) {
-        Liquid liquid = null;
         SoftDrink drink = new SoftDrink(liquid,"cola", 0.5);
         assertEquals("spezi", drink.mixSoftDrinks(name1, name2));
     }
@@ -27,27 +33,26 @@ class SoftDrinkTest extends Drink implements PurchasableDrink{
     })
     @DisplayName("Test getVolume")
     void testGetVolume(String name, double vol) {
-        Liquid liquid = null;
         Drink drink = new SoftDrink(liquid,name, vol);
         assertEquals(0.5, drink.getVolume());
     }
 
     @org.junit.jupiter.api.Test
     void testGetAlcoholPercent() {
-        Drink drink = new SoftDrink(null,"soda", 0.5);
+        Drink drink = new SoftDrink(liquid,"soda", 0.5);
         assertEquals(0.0, drink.getAlcoholPercent());
 
     }
 
     @org.junit.jupiter.api.Test
     void testIsAlcoholic() {
-        Drink drink = new SoftDrink(null,"sprite", 0.5);
+        Drink drink = new SoftDrink(liquid,"sprite", 0.5);
         assertEquals( false, drink.isAlcoholic());
     }
 
     @org.junit.jupiter.api.Test
     void testGetName() {
-        Drink drink = new SoftDrink(null,"icetea", 0.5);
+        Drink drink = new SoftDrink(liquid,"icetea", 0.5);
         assertEquals("icetea", drink.getName());
     }
 
