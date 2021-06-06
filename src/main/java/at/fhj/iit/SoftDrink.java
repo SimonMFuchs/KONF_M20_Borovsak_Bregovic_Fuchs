@@ -81,5 +81,7 @@ public class SoftDrink extends Drink implements PurchasableDrink{
     @Override
     public void purchase(CashRegister cashRegister) {
         cashRegister.addSale(new Sale(cashRegister.getCurrentCashier(), this.getPrice(), this.getAlcoholPercent()));
+
     }
+
 }
