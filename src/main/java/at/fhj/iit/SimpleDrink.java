@@ -59,7 +59,7 @@ public class SimpleDrink extends Drink implements PurchasableDrink{
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     /**
