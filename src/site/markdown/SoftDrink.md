@@ -1,6 +1,9 @@
 #Softdrink
 
 **Creating a non alcoholic Drink**
+* Author: Dominik Bregovic
+* Last change 06.06.2021
+
 
 | methods       |  description  |parameters|return values| 
 | ------------- |---------------|----------|-------------|
