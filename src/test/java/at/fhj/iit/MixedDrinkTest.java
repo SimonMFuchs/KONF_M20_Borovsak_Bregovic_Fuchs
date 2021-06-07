@@ -13,8 +13,6 @@ public class MixedDrinkTest {
     private MixedDrink drink;
     private Liquid l1;
     private Liquid l2;
-    private CashRegister cashRegister;
-    private Cashier cashier;
 
     @ParameterizedTest
     @CsvSource({
@@ -105,6 +103,7 @@ public class MixedDrinkTest {
         assertEquals(expected, actual);
     }
 
+    @DisplayName("Testing getName")
     @Test
     public void testGetName(){
         l1 = new Liquid("TestLiquid1", 0.4, 0);
@@ -113,6 +112,7 @@ public class MixedDrinkTest {
         assertEquals("TestDrink", drink.getName());
     }
 
+    @DisplayName("Testing getPrice")
     @Test
     public void testGetPrice(){
         l1 = new Liquid("TestLiquid1", 0.4, 0, 10);
@@ -121,14 +121,15 @@ public class MixedDrinkTest {
         assertEquals(9, drink.getPrice());
     }
 
+    @DisplayName("Testing purchase")
     @Test
     public void testPurchase(){
         l1 = new Liquid("TestLiquid1", 0.4, 0, 10);
         l2 = new Liquid("TestLiquid1", 0.1, 40, 50);
         drink = new MixedDrink("TestDrink", l1, l2, "lemon");
 
-        cashier = new Cashier("cashier");
-        cashRegister = new CashRegister(cashier);
+        Cashier cashier = new Cashier("cashier");
+        CashRegister cashRegister = new CashRegister(cashier);
         Sale expected = new Sale(cashier, 9, 8);
         drink.purchase(cashRegister);
         assertEquals(expected.getPrice(), cashRegister.getSalesList().get(0).getPrice());

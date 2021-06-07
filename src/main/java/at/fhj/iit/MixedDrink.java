@@ -1,5 +1,7 @@
 package at.fhj.iit;
 
+import java.util.Locale;
+
 /**
  * represents a alcoholic mixed drink
  */
@@ -41,8 +43,6 @@ public class MixedDrink extends Drink implements PurchasableDrink{
         this.l1 = l1;
         this.l2 = l2;
         this.price = l1.getPrice() + l2.getPrice();
-
-        java.util.Locale.setDefault(new java.util.Locale("en", "US"));
     }
 
     /**
@@ -106,7 +106,7 @@ public class MixedDrink extends Drink implements PurchasableDrink{
      */
     @Override
     public String toString(){
-        String alcoholPercent = String.format("%.1f", getAlcoholPercent());
+        String alcoholPercent = String.format(Locale.ENGLISH, "%.1f", getAlcoholPercent());
         if(hasGarnish())
             return "Mixed Drink called " + name + " with " + alcoholPercent + " percent alcohol by volume and with " + garnish + " as garnish";
         else
