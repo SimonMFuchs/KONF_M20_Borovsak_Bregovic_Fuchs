@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args){
 
         //TUTORIAL
+        
         //1.
         Liquid tonic = new Liquid("Tonic", 0.150, 0, 2);
         Liquid gin = new Liquid("Gin", 0.04, 40, 50);
@@ -14,7 +15,6 @@ public class Main {
 
         //3.
         Cashier ourCashier = new Cashier("Adam");
-
 
         //4.
         CashRegister cashRegister = new CashRegister(ourCashier);
