@@ -1,6 +1,7 @@
 package at.fhj.iit;
 
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Configuration management
@@ -9,7 +10,7 @@ import java.util.Date;
  * Last modified: 25.04.2021
  */
 
-public class Wine extends Drink implements PurchasableDrink {
+public class Wine extends Drink {
 
     /**
      * represents two different liquids from Liquid class: w, a
@@ -75,7 +76,7 @@ public class Wine extends Drink implements PurchasableDrink {
 
     @Override
     public String toString(){
-        String alcoholPercent = String.format("%.1f", getAlcoholPercent());
+        String alcoholPercent = String.format(Locale.ENGLISH,"%.1f", getAlcoholPercent());
 
             return "Mixed wine drink " + name + " with " + alcoholPercent + " percent alcohol by volume";
     }

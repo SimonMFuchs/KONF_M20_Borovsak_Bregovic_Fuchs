@@ -5,7 +5,7 @@ import java.util.Locale;
 /**
  * represents a alcoholic mixed drink
  */
-public class MixedDrink extends Drink implements PurchasableDrink{
+public class MixedDrink extends Drink{
 
     /**
      * uses two liquids and a garnish
