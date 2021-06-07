@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * represents a simple drink liquid which can be used in drinks
  */
-public class SimpleDrink extends Drink implements PurchasableDrink{
+public class SimpleDrink extends Drink{
 
     /**
      * uses only one liquid

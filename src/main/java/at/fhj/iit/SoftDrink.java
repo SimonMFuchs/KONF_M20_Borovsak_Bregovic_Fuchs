@@ -3,7 +3,7 @@ package at.fhj.iit;
 import java.util.Date;
 
 //have to use the parentclass liquide
-public class SoftDrink extends Drink implements PurchasableDrink{
+public class SoftDrink extends Drink{
 
     Liquid mySoftDrink;
 

@@ -14,7 +14,7 @@ public class Main {
 
         //3.
         Cashier ourCashier = new Cashier("Adam");
-        Sale sale1 = new Sale(ourCashier, ginTonic.getPrice(), ginTonic.getAlcoholPercent());
+
 
         //4.
         CashRegister cashRegister = new CashRegister(ourCashier);
@@ -26,7 +26,7 @@ public class Main {
                 "Date: " + cashRegister.getSalesList().get(0).date + "\n" +
                 "Price of Drink: " + String.format("%.2f",cashRegister.getSalesList().get(0).price) + " €\n");
 
-       // System.out.println(cashRegister.getRevenueByCashier(ourCashier));
+        System.out.println("\n***End of Tutorial***\n\n");
 
         //TUTORIAL ENDE
 

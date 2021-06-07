@@ -9,7 +9,7 @@ import java.util.Date;
  * Last modified: 25.04.2021
  */
 
-public class Wine extends Drink implements PurchasableDrink {
+public class Wine extends Drink {
 
     /**
      * represents two different liquids from Liquid class: w, a
