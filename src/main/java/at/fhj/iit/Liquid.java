@@ -97,6 +97,7 @@ public class Liquid {
      * @param volume new volume
      */
     public void setVolume(double volume) {
+        checkVolume(volume);
         this.volume = volume;
     }
 

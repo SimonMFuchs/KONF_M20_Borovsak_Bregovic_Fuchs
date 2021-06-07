@@ -57,4 +57,9 @@ public class LiquidTest {
         l1.setPrice(25);
         assertEquals(2.5, l1.getPrice());
     }
+
+    @Test
+    void testCheckVolume() {
+        assertThrows(IllegalArgumentException.class, () -> {l1.setVolume(0);});
+    }
 }
