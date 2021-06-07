@@ -9,6 +9,9 @@ In the following tables is explained how the new functionalities were design and
 ###Class Cashier
 Represents a cashier - the person that is in control of the CashRegister
 
+For now this class simply contains a String name, but in the future you could add a pin or some kind of verification,
+so the cashier has to log in and verify to be able to use the cash register.
+
 | Code                    | Description                   |parameters|
 | ------------------------|-------------------------------|----------|
 | constructor Cashier     | Creating a cashier            | name     | 
@@ -17,6 +20,16 @@ Represents a cashier - the person that is in control of the CashRegister
 
 ###Class CashRegister
 Represents a cash register which stores sales and cashiers and can return revenue information
+
+When a cash register is created you have to give it a current cashier who is operating it. These cashiers can change, but they must
+be added to the cashierList before. We solved it in this way because we wanted to have some kind of overview 
+(and also a verification system in the future) on whos able to operate the cash register. 
+
+The cash register stores all the sales which get added to it. Via the different getRevenue methods you can get a detailed 
+look on what, when and who made how much revenue. In the future you might add a List of Drinks which are purchasable and rework the 
+purchasing system, so you have a method purchase in the cash register which you tell the drink that got purchased and 
+then generates a sale through this.
+
 
 | Code                    | Description                                                       |parameters |
 | ------------------------|-------------------------------------------------------------------|-----------|
@@ -42,6 +55,15 @@ Represents a cash register which stores sales and cashiers and can return revenu
 ###Class Sale 
 Represents a sale of drink
 
+Here we store the data regarding a specific sale. The day is created when the object itself is created and is stored as
+a String in the format dd.MM.yyyy, so you are able to get all sales which happened at a specific day and 
+not at the exact same time. 
+
+We also store the cashier who made the sale, as well as price and alcoholic percentage information regarding 
+the drink that got sold. 
+
+This is the information the cash register uses to generate the different kind of revenues.
+
 | Code                    | Description                                                       |parameters |
 | ------------------------|-------------------------------------------------------------------|-----------|
 | variable date           | day of sale as string                                             |/          | 
@@ -58,3 +80,6 @@ Represents a sale of drink
 
 ### interface PurchasableDrink 
 Interface for drinks that are purchasable
+
+Simply a method to be able to add a sold drink to a given cash register. 
+The method generates a sale with the information of the drink and passes that sale to the given cash register
