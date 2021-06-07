@@ -5,19 +5,28 @@ public class Main {
     public static void main(String[] args){
 
         //TUTORIAL
-
-        Cashier tutorial = new Cashier("Tutorial");
-        CashRegister cashRegister = new CashRegister(tutorial);
-
+        //1.
         Liquid tonic = new Liquid("Tonic", 0.150, 0, 2);
         Liquid gin = new Liquid("Gin", 0.04, 40, 50);
+
+        //2.
         Drink ginTonic = new MixedDrink("Gin Tonic", gin, tonic);
 
+        //3.
+        Cashier ourCashier = new Cashier("Adam");
+        Sale sale1 = new Sale(ourCashier, ginTonic.getPrice(), ginTonic.getAlcoholPercent());
+
+        //4.
+        CashRegister cashRegister = new CashRegister(ourCashier);
+
+        //5.
         ginTonic.purchase(cashRegister);
 
-        System.out.println(cashRegister.getCurrentCashier().getName());
+        System.out.print("Cashier: " + cashRegister.getCurrentCashier().getName()+ "\n" +
+                "Date: " + cashRegister.getSalesList().get(0).date + "\n" +
+                "Price of Drink: " + String.format("%.2f",cashRegister.getSalesList().get(0).price) + " €\n");
 
-        System.out.println(cashRegister.getRevenueByCashier(tutorial));
+       // System.out.println(cashRegister.getRevenueByCashier(ourCashier));
 
         //TUTORIAL ENDE
 
