@@ -15,7 +15,7 @@
 This project lets you create different drinks composed of different liquids. 
 For more information on the drinks you're able to create with this program please look below. 
 
-In addition you can also add drinks as a purchase to a cash register, 
+In addition, you can also add drinks as a purchase to a cash register, 
 which then tracks what kind of drinks got sold, when and by whom they got sold and how much revenue you made.
 
 ### How to use this project? ###
@@ -34,10 +34,10 @@ Not much to say here. Just make sure you have maven installed and import the pro
 | 03.06.2021    |  12:36        | Created branch name Sales    | Katarina               |
 | 03.06.2021    |  12:37        | Modified README file         | Katarina               |
 | 03.06.2021    |  13:01        | Created class Sales.java     | Katarina               |
-| 05.06.2021    |  20:00        | Implemented cash register functionalty| Simon         |
+| 05.06.2021    |  20:00        | Implemented cash register functionality| Simon         |
 | 06.06.2021    |  17:00        | Created tests for cash register classes| Simon        |
-| 06.06.2021    |          | | Dominik       |
-| 06.06.2021    |         | | Dominik        |
+| 06.06.2021    |  15:50        | deleted unnecessary implementations of PurchasableDrink  | Dominik       |
+| 07.06.2021    |  16:05        | Committed Tutorial | Dominik        |
 More detailed commit history on [repository](https://github.com/SimonMFuchs/KONF_M20_Borovsak_Bregovic_Fuchs/commits/main)
 
 ## Sources for writing a README document ## 
@@ -54,7 +54,7 @@ More detailed commit history on [repository](https://github.com/SimonMFuchs/KONF
 | Class name         | Date         |  Coverage                 |Name of the contributor | 
 | ------------------ |------------- |---------------------------|------------------------|
 | MixedDrinkTest     | 06.06.2021   | 100% methods, 100%lines   | Simon                  |
-| SoftDrinkTest      |              |                           | Dominik                 |
+| SoftDrinkTest      | 06.06.2021   |  100% methods, 80% lines  |  Dominik               |
 | WineTest           | 03.06.2021   | 100% methods, 91% lines   | Katarina               |
 
 
@@ -94,7 +94,7 @@ MixedDrink class,  A simple mixed drink consisting of two liquids and an optiona
 
 Testing: 
 100% coverage.
-Most methods are tested with parameterrized tests.
+Most methods are tested with parameterized tests.
 
 
 
