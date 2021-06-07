@@ -64,10 +64,20 @@ public class Wine extends Drink {
         return false;
     }
 
+    /**
+     * Method from class Drink
+     * returns the String value name
+     */
+
     @Override
     public String getName() {
         return name;
     }
+
+    /**
+     * Method from class Drink
+     * returns the double value price
+     */
 
     @Override
     public double getPrice() {
